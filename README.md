@@ -1,5 +1,5 @@
 # Spots
-video link (https://drive.google.com/file/d/1Ocw1lwlUWmbBxIDQ7zCzMIA2H5oVMdWs/view?usp=drive_link)
+video link (https://drive.google.com/file/d/1Ocw1lwlUWmbBxIDQ7zCzMIA2H5oVMdWs/view?usp=sharing)
 
 # Description
 Sprint  3
