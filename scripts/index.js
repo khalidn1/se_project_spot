@@ -29,13 +29,17 @@ function getCardElement(data) {
     .cloneNode(true);
 
     const cardNameEl = cardElement.querySelector(".card__title");
-    const cardImageEl = cardElement.querySelectorAll(".card__image");
+    const cardImageEl = cardElement.querySelector(".card__image");
+    
+    
 
     cardNameEl.textContent = data.name;
     cardImageEl.textContent = data.image;
+   
 
     return cardElement;
 }
+
 function openModal () {
 editModalNameInput.value = profileName.textContent;
 editModalDescriptionInput.value = profileDescription.textContent;
