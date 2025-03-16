@@ -30,12 +30,12 @@ function getCardElement(data) {
 
     const cardNameEl = cardElement.querySelector(".card__title");
     const cardImageEl = cardElement.querySelector(".card__image");
-    
-    
+    const likeButton = cardElement.querySelector(".card__like-button");
 
     cardNameEl.textContent = data.name;
-    cardImageEl.textContent = data.image;
-   
+    cardImageEl.src = data.link;
+    cardImageEl.alt = data.name;
+
 
     return cardElement;
 }

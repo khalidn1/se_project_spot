@@ -45,6 +45,13 @@
   opacity: 1;
 }
 
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
