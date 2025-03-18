@@ -21,7 +21,7 @@
   background: #fff;
   padding: 24px;
   max-width: 80vw;
-  width: 600px;
+  width: 730px;
   position: relative;
   box-sizing: border-box;
   border-radius: 8px;
@@ -30,16 +30,20 @@
 .modal__close-btn {
   background-image: url(../images/close.svg);
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 30px;
   height: 40px;
   width: 40px;
   opacity: 40%;
   background: none;
   border: none;
   font-size: 40px;
-  color: gray;
+}
+
+.modal__close-btn:hover {
   cursor: pointer;
+  opacity: 1;
+  color: #000;
 }
 
 .modal__title {
@@ -57,10 +61,16 @@
 }
 
 .modal__input {
-  padding: 12px;
+  padding: 16px;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.modal__input:hover {
+border: 1px solid black;
+cursor: pointer;
 }
 
 .modal__submit-btn {
@@ -106,7 +116,7 @@
 
 @media screen and (min-width: 1024px) {
   .modal__container {
-    width: 600px; 
+    width: 730px; 
     padding: 32px; 
   }
 
@@ -117,8 +127,4 @@
   .modal__input {
     font-size: 16px;
   }
-
-  .modal__submit-btn {
-    width: 200px; 
-}
 }
