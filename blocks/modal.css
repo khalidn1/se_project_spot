@@ -22,10 +22,11 @@
 }
 
 .modal__container {
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: 8px;
   background: #fff;
-  padding: 24px;
-  max-width: 80vw;
-  width: 730px;
   position: relative;
   box-sizing: border-box;
   border-radius: 8px;
@@ -38,6 +39,7 @@
   background-color: transparent;
   box-shadow: none;
   padding: 0;
+  position: relative;
 }
 
 .modal__caption {
@@ -45,15 +47,35 @@
   color: #fff;
   font-size: 16px;
   text-align: center;
+  background-color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  max-width: 80vw;
+  box-sizing: border-box;
+}
+
+#preview-modal .modal__close-btn {
+  background-image: url("../images/closedark.svg");
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
 }
 
 .modal__close-btn {
   background-image: url(../images/close.svg);
   position: absolute;
-  top: 20px;
-  right: 30px;
-  height: 40px;
-  width: 40px;
+  top: 16px;
+  right: 16px;
+  height: 24px;
+  width: 24px;
   opacity: 40%;
   background: none;
   border: none;
@@ -67,9 +89,9 @@
 }
 
 .modal__title {
-  margin: 0 0 32px;
+  margin: 0 0 24px;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1;
 }
 
@@ -81,7 +103,8 @@
 }
 
 .modal__input {
-  padding: 16px;
+  font-size: 16px;
+  padding: 12px 16px;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
@@ -94,7 +117,7 @@ cursor: pointer;
 }
 
 .modal__preview-image {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   border-radius: 8px;
   object-fit: contain;
@@ -103,6 +126,7 @@ cursor: pointer;
 .modal__submit-btn {
   width: 156px;
   padding: 14px 0;
+  font-size: 16px;
   background-color: #000;
   color: #fff;
   cursor: pointer;
@@ -120,17 +144,19 @@ cursor: pointer;
   .modal__container {
     width: 95vw;
     max-width: none;
-    padding: 12px;
+    padding: 16px;
   }
 
   .modal__title {
     font-size: 20px;
-    margin: 10px 0 34px;
+    margin-bottom: 20px;
   }
 
   .modal__close-btn {
     top: 12px;
     right: 12px;
+    height: 24px;
+    width: 24px;
   }
 
   .modal__label {
@@ -139,6 +165,11 @@ cursor: pointer;
 
   .modal__submit-btn {
     width: 100%;
+    font-size: 16px;
+  }
+
+  .modal__input {
+    font-size: 16px;
   }
 }
 
@@ -156,3 +187,18 @@ cursor: pointer;
     font-size: 16px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .modal__preview-image {
+    width: 100%;
+    max-width: 90vw;
+    border-radius: 8px;
+  }
+
+  .modal__caption {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+}
+
