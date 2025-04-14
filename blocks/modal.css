@@ -40,6 +40,8 @@
   box-shadow: none;
   padding: 0;
   position: relative;
+  width: 100%;
+  max-width: 343px;
 }
 
 .modal__caption {
@@ -54,32 +56,24 @@
   box-sizing: border-box;
 }
 
-#preview-modal .modal__close-btn {
-  background-image: url("../images/closedark.svg");
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 2;
-}
-
 .modal__close-btn {
-  background-image: url(../images/close.svg);
   position: absolute;
   top: 16px;
   right: 16px;
-  height: 24px;
-  width: 24px;
-  opacity: 40%;
-  background: none;
+  background-color: #000;
+  background-image: url("../images/closedark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  font-size: 40px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .modal__close-btn:hover {
@@ -176,11 +170,11 @@ cursor: pointer;
 @media screen and (min-width: 1024px) {
   .modal__container {
     width: 730px; 
-    padding: 32px; 
+    padding: 40px; 
   }
 
   .modal__title {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   .modal__input {
@@ -199,6 +193,18 @@ cursor: pointer;
     font-size: 14px;
     padding: 6px 12px;
     border-radius: 6px;
+  }
+
+  .modal__container_type_preview {
+    max-width: 90vw;
+  }
+
+  .modal__container {
+    padding: 16px;
+  }
+
+  .modal__title {
+    font-size: 20px;
   }
 }
 
