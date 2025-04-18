@@ -23,13 +23,12 @@
 
 .modal__container {
   width: 100%;
-  max-width: 500px;
-  padding: 32px;
+  max-width: 430px;
+  padding: 36px;
   border-radius: 8px;
   background: #fff;
   position: relative;
   box-sizing: border-box;
-  border-radius: 8px;
 }
 
 .modal__container_type_preview {
@@ -64,9 +63,9 @@
   background-image: url("../images/closedark.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: 32px;
   border-radius: 50%;
-  width: 50px;
+  width: 40px;
   height: 40px;
   border: none;
   cursor: pointer;
@@ -74,8 +73,13 @@
 }
 
 .modal__close-btn_type_preview {
-  top: 0;
-  right: -52.5px;
+  position: absolute;
+  top: -36px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  z-index: 2;
 }
 
 .modal__close-btn:hover {
@@ -113,12 +117,11 @@ cursor: pointer;
 }
 
 .modal__preview-image {
-  max-width: 80vw;
-  max-height: 80vh;
   width: 100%;
+  max-width: 343px;
+  height: auto;
   border-radius: 8px;
-  display: block;
-  object-fit: contain;
+  object-fit: cover; 
 }
 
 .modal__submit-btn {
@@ -142,7 +145,7 @@ cursor: pointer;
   .modal__container {
     width: 95vw;
     max-width: none;
-    padding: 16px;
+    padding: 25px 22px;
   }
 
   .modal__title {
@@ -156,10 +159,11 @@ cursor: pointer;
   }
 
   .modal__close-btn {
-    top: 12px;
-    right: 12px;
-    height: 24px;
-    width: 24px;
+    width: 26px;
+    height: 26px;
+    top: -45px;
+    right: 0;
+    background-size: 26px;
   }
 
   .modal__label {
@@ -194,18 +198,24 @@ cursor: pointer;
 @media screen and (max-width: 480px) {
   .modal__preview-image {
     width: 100%;
-    max-width: 90vw;
-    border-radius: 8px;
+    max-width: 343px;
+    height: auto;
+    border-radius: 10px;
   }
 
-  .modal__caption {
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 6px;
+  .modal__close-btn_type_preview {
+    top: -45px;
+    width: 26px;
+    height: 26px;
+    background-size: 26px;
   }
 
   .modal__container_type_preview {
-    max-width: 90vw;
+    width: 100%;
+    max-width: 343px;
+    padding: 0;
+    margin: 0;
+    position: relative;
   }
 
   .modal__container {
@@ -216,4 +226,3 @@ cursor: pointer;
     font-size: 20px;
   }
 }
-
