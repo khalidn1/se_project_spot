@@ -29,6 +29,7 @@
   background: #fff;
   position: relative;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .modal__container_type_preview {
@@ -133,6 +134,10 @@ cursor: pointer;
   border-radius: 8px;
   margin-left: 0;
   margin-top: 10px;
+}
+
+.modal__submit-btn_disabled {
+  
 }
 
 
