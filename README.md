@@ -6,7 +6,7 @@ Spots is an interactive web app where users can view beautiful travel destinatio
 
 # Tech Stack
 - HTML
-- CSS3 + BEM Methodology
+- CSS + BEM Methodology
 - Responsive Design
 - Form Validation using HTML + JavaScript
 - Git & GitHub Pages

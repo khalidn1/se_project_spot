@@ -83,7 +83,7 @@ function getCardElement(data) {
     previewCaption.textContent = data.name;
     openModal(previewModal);
   });
-  
+
   return cardElement;
 }
 
@@ -121,7 +121,7 @@ function handleAddCardSubmit(evt) {
 
   const newCard = {
     name: name,
-    link: link
+    link: link,
   };
 
   const cardElement = getCardElement(newCard);
@@ -131,17 +131,6 @@ function handleAddCardSubmit(evt) {
   resetValidation(cardForm, validationConfig);
   closeModal(cardModal);
 }
-
-const validationConfig = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "form__input-error_visible"
-};
-
-enableValidation(validationConfig);
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
@@ -155,6 +144,7 @@ editModalCloseBtn.addEventListener("click", () => {
 });
 
 cardModalBtn.addEventListener("click", () => {
+  resetValidation(cardForm, validationConfig);
   openModal(cardModal);
 });
 
@@ -174,10 +164,10 @@ initialCards.forEach((item) => {
   cardsList.prepend(cardEl);
 });
 
-const modals = document.querySelectorAll('.modal');
+const modals = document.querySelectorAll(".modal");
 
 modals.forEach((modal) => {
-  modal.addEventListener('mousedown', (evt) => {
+  modal.addEventListener("mousedown", (evt) => {
     if (evt.target === modal) {
       closeModal(modal);
     }
