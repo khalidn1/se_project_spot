@@ -128,7 +128,12 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
 
   cardForm.reset();
-  resetValidation(cardForm, validationConfig);
+
+  const buttonElement = cardForm.querySelector(
+    validationConfig.submitButtonSelector
+  );
+  disableButton(buttonElement, validationConfig);
+
   closeModal(cardModal);
 }
 
@@ -144,7 +149,6 @@ editModalCloseBtn.addEventListener("click", () => {
 });
 
 cardModalBtn.addEventListener("click", () => {
-  resetValidation(cardForm, validationConfig);
   openModal(cardModal);
 });
 
