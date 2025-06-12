@@ -12,35 +12,44 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img
+  src="<%= require('./images/logo.svg').default %>"
+  alt="Spot logo"
+  class="header__logo"
+/>
       </header>
       <main class="content">
         <section class="profile page__section">
           <div class="profile__avatar-container">
             <button class="profile__avatar-btn">
               <img
-                class="profile__avatar-icon"
-                src="./images/pencil light.svg"
-                alt="Profile icon"
-              />
+              src="<%= require('./images/pencil light.svg').default %>"
+              alt="Profile icon"
+            />
             </button>
             <img
-              src="./images/avatar.jpg"
-              alt="Profile avatar"
-              class="profile__avatar"
-            />
+  src="<%= require('./images/avatar.jpg').default %>"
+  alt="Profile avatar"
+  class="profile__avatar"
+/>
           </div>
 
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="./images/icon.svg" alt="Edit profile button" /> Edit
+              <img
+  src="<%= require('./images/icon.svg').default %>"
+  alt="Edit profile button"
+/>Edit
               Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="New post button" />New Post
+            <img
+  src="<%= require('./images/plus.svg').default %>"
+  alt="New post button"
+/>New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -72,7 +81,10 @@
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="./images/close.svg" alt="Close modal button" />
+            <img
+              src="<%= require('./images/close.svg').default %>"
+              alt="Close modal button"
+            />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form id="edit-profile-form" class="modal__form">
@@ -112,8 +124,11 @@
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="./images/close.svg" alt="Close modal button" />
-          </button>
+            <img
+              src="<%= require('./images/close.svg').default %>"
+              alt="Close modal button"
+            />
+          </button>          
           <h2 class="modal__title">New post</h2>
           <form id="add-card-form" class="modal__form">
             <label for="add-card-link-input" class="modal__label">
