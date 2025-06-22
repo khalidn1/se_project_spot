@@ -10,7 +10,7 @@ import icon from "../images/icon.svg";
 import plus from "../images/plus.svg";
 import pencil from "../images/pencil light.svg";
 import avatarImage from "../images/avatar.jpg";
-import close from "../images/close.svg";
+import close from "../images/close.svg";   
 
 const initialCards = [
   {
