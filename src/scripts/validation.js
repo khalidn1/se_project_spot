@@ -50,7 +50,7 @@ function showInputError(formElement, inputElement, errorMessage, config) {
   errorElement.classList.add(config.errorClass);
 }
 
-function disableButton(buttonElement, config) {
+export function disableButton(buttonElement, config) {
   buttonElement.classList.add(config.inactiveButtonClass);
   buttonElement.disabled = true;
 }

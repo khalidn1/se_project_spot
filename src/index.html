@@ -12,26 +12,26 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="#" alt="Spot logo" class="header__logo" />
+        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <div class="profile__avatar-container">
             <button class="profile__avatar-btn">
-              <img src="#" alt="Profile icon" />
+              <img src="./images/pencil light.svg" alt="Profile icon" />
             </button>
-            <img src="#" alt="Profile avatar" class="profile__avatar" />
+            <img src="" alt="Profile avatar" class="profile__avatar" />
           </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
-              <img src="#" alt="Edit profile button" />
+              <img src="./images/icon.svg" alt="Edit profile button" />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="#" alt="New post button" />
+            <img src="./images/plus.svg" alt="New post button" />
             New Post
           </button>
         </section>
@@ -68,7 +68,7 @@
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="#" alt="Close modal button" />
+            <img src="./images/close.svg" alt="Close modal button" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form id="edit-profile-form" class="modal__form">
@@ -108,7 +108,7 @@
       <div class="modal" id="add-card-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="#" alt="Close modal button" />
+            <img src="./images/close.svg" alt="Close modal button" />
           </button>
           <h2 class="modal__title">New post</h2>
           <form id="add-card-form" class="modal__form">
@@ -156,24 +156,24 @@
       </div>
 
       <div class="modal modal_type_avatar" id="avatar-modal">
-        <div class="modal__content">
+        <div class="modal__container">
           <button
             aria-label="Close modal"
-            class="modal__close modal__close_type_avatar"
+            class="modal__close-btn modal__close_type_avatar"
             type="button"
           >
-            <img src="#" alt="Close modal" />
+            <img src="./images/close.svg" alt="Close modal" />
           </button>
           <h3 class="modal__title">Change Profile Picture</h3>
           <form class="modal__form" id="avatar-form">
             <input
               type="url"
-              name="avatarLink"
+              name="avatar"
               class="modal__input modal__input_type_avatar-link"
               placeholder="Link to new profile picture"
               required
             />
-            <button class="modal__save-btn" type="submit">Save</button>
+            <button class="modal__submit-btn" type="submit">Save</button>
           </form>
         </div>
       </div>

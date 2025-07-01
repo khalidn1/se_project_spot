@@ -3,6 +3,7 @@ import {
   enableValidation,
   validationConfig,
   resetValidation,
+  disableButton,
 } from "../scripts/validation.js";
 import Api from "../utils/Api.js";
 import logo from "../images/logo.svg";
@@ -46,13 +47,15 @@ const initialCards = [
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
-const profileAvatar = document.querySelector(".profile__avatar");
 
+const profileAvatar = document.querySelector(".profile__avatar");
 const avatarButton = document.querySelector(".profile__avatar-btn");
 const avatarModal = document.querySelector("#avatar-modal");
-const avatarForm = avatarModal.querySelector(".modal__form");
+const avatarForm = document.querySelector("#avatar-form");
 const avatarInput = avatarForm.querySelector(".modal__input_type_avatar-link");
-const avatarCloseBtn = avatarModal.querySelector(".modal__close_type_avatar");
+const avatarCloseBtn = avatarModal.querySelector(
+  ".modal__close.modal__close_type_avatar"
+);
 
 const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
@@ -181,13 +184,18 @@ function getCardElement(data) {
 
     action
       .then((updatedCard) => {
-        likeCountEl.textContent = updatedCard.likes.length;
-        if (updatedCard.likes.some((user) => user._id === currentUserId)) {
+        const updatedLikes = Array.isArray(updatedCard.likes)
+          ? updatedCard.likes
+          : [];
+        likeCountEl.textContent = updatedLikes.length;
+
+        if (updatedLikes.some((user) => user._id === currentUserId)) {
           likeBtn.classList.add("card__like-button_liked");
         } else {
           likeBtn.classList.remove("card__like-button_liked");
         }
       })
+
       .catch((err) => console.error("Like error:", err))
       .finally(() => (likeBtn.disabled = false));
   });
