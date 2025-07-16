@@ -79,7 +79,7 @@ function checkInputValidity(formElement, inputElement, config) {
   }
 }
 
- export const validationConfig = {
+export const validationConfig = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
