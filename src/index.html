@@ -166,6 +166,8 @@
           </button>
           <h3 class="modal__title">Change Profile Picture</h3>
           <form class="modal__form" id="avatar-form">
+            <label for="avatar-link-input" class="modal__label">
+              Avatar link
             <input
               type="url"
               name="avatar"
@@ -173,8 +175,9 @@
               class="modal__input modal__input_type_avatar-link"
               placeholder="Link to new profile picture"
               required
-            />
+            /> 
             <span class="form__input-error avatar-link-input-error"></span>
+            </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
         </div>
