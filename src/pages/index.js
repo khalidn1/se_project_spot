@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".modal__input_type_avatar-link"
   );
   const avatarCloseBtn = avatarModal.querySelector(
-    ".modal__close.modal__close_type_avatar"
+    ".modal__close-btn"
   );
 
   const cardsList = document.querySelector(".cards__list");
