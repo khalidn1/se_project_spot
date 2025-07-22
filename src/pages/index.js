@@ -166,9 +166,17 @@ document.addEventListener("DOMContentLoaded", () => {
     imgEl.alt = data.name;
 
     const likes = Array.isArray(data.likes) ? data.likes : [];
-    likeCountEl.textContent = likes.length;
 
-    if (likes.some((user) => user._id === currentUserId)) {
+    if (Array.isArray(data.likes)) {
+    likeCountEl.textContent = data.likes.length;
+    } else {
+      likeCountEl.textContent = 0;
+    }
+
+    if (
+      data.isLiked === true ||
+      likes.some((user) => user._id === currentUserId)
+    ) {
       likeBtn.classList.add("card__like-button_liked");
     }
 
@@ -188,20 +196,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
       action
         .then((updatedCard) => {
-          const updatedLikes = Array.isArray(updatedCard.likes)
-            ? updatedCard.likes
-            : [];
-          likeCountEl.textContent = updatedLikes.length;
+          if (Array.isArray(updatedCard.likes)) {
+            const updatedLikes = updatedCard.likes;
 
-          if (updatedLikes.some((user) => user._id === currentUserId)) {
-            likeBtn.classList.add("card__like-button_liked");
+            likeCountEl.textContent = updatedLikes.length;
+
+            if (updatedLikes.some((user) => user._id === currentUserId)) {
+              likeBtn.classList.add("card__like-button_liked");
+            } else {
+              likeBtn.classList.remove("card__like-button_liked");
+            }
           } else {
-            likeBtn.classList.remove("card__like-button_liked");
+            if (updatedCard.isLiked === true) {
+              likeBtn.classList.add("card__like-button_liked");
+            } else {
+              likeBtn.classList.remove("card__like-button_liked");
+            }
+
+            if (typeof updatedCard.likesCount === "number") {
+              likeCountEl.textContent = updatedCard.likesCount;
+            }
           }
         })
-
-        .catch((err) => console.error("Like error:", err))
-        .finally(() => (likeBtn.disabled = false));
+        .catch((err) => console.error("Like error:", err));
     });
 
     deleteBtn.addEventListener("click", () => {
