@@ -1,0 +1,10 @@
+.form__input-error {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  height: 14px;
+}
+
+.form__input-error_visible {
+  color: red;
+}
